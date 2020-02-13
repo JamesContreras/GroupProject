@@ -6,12 +6,13 @@ namespace GroupProject
 {
     class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            var planet = new Planet();
-            Console.WriteLine(Planet.Name);
-
+           
             
+            
+            Planets();
+            SpaceStation();   
         }
 
         public static void Planets()
