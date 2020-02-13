@@ -6,14 +6,16 @@ namespace GroupProject
 {
     class Planet
     {
-            public string Name;
-            public int Size;
-            public int DistancefromStar;
-            public int Population;
-            public string Climate;
-            public int Atmoshphere;
-            public string TradeSupply;
-            public string TradeDemand;
+        public string Name;
+        public string PlanetCoord;
+        public string Size;
+        public string SizeMeasure;
+        public string DistancefromStar;
+        public string Population;
+        public string Climate;
+        public string Atmoshphere;
+        public string TradeSupply;
+        public string TradeDemand;
         
     }
 }
