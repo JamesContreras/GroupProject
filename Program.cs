@@ -12,6 +12,47 @@ namespace GroupProject
             
             
             
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+     
+            
             Planets();
             SpaceStation();   
         }
