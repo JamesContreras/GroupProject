@@ -9,7 +9,6 @@ namespace GroupProject
         public static void Main(string[] args)
         {
 
-           
             
             
             Planets();
