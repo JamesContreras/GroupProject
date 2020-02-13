@@ -8,12 +8,11 @@ namespace GroupProject
     {
 
         public string StationName;
-        public int StationNumber;
         public int StationCoord;
-        public int Size;
+        public string Size;
         public string SizeMeasure;
-        public int DistancefromStar;
-        public int Population;
+        public string DistancefromStar;
+        public string Population;
         public string TradeSupply;
         public string TradeDemand;
 

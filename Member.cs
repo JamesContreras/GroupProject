@@ -7,12 +7,12 @@ namespace GroupProject
     class Member
     {
         public string Name;
-        public int Size;
+        public string Size;
         public string SizeMeasure;
-        public int DistancefromStar;
-        public int Population;
+        public string DistancefromStar;
+        public string Population;
         public string Climate;
-        public int Atmoshphere;
+        public string Atmoshphere;
         public string TradeSupply;
         public string TradeDemand;
 

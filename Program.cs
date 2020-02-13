@@ -13,12 +13,7 @@ namespace GroupProject
             
             
             Planets();
-
-            SpaceStation();
-            
-
-
-            
+            SpaceStation();   
         }
 
         public static void Planets()
@@ -51,7 +46,7 @@ namespace GroupProject
             planetB.Size = "Diameter 2900 Miles (4600 kilometres)";
             planetB.DistancefromStar = "150,245,120 Miles (241,796,082 KM)";
             planetB.Population = "10K Colonists";
-            planetB.Climate = "Average temperature -80F";
+            planetB.Climate = "Average temperature : -300F";
             planetB.Atmoshphere = "95% Carbon Dioxide, 3% Nitrogen, 1.6% Argon";
             planetB.TradeSupply = "Water, Food Rations, Mineral Ore";
             planetB.TradeDemand = "Seeds, Medical Supplies, Fuel, Food Rations";
@@ -61,6 +56,11 @@ namespace GroupProject
         {
             var spacestationA = new SpaceStation();
             spacestationA.StationName = "Trade Station : Hadley's Hope";
+            spacestationA.StationCoord = ;
+            spacestationA.Size = "2900 Miles (4600 kilometres)";
+            spacestationA.Population = "8,000 Stationers";
+            spacestationA.TradeSupply = "Food Rations, Mineral Ore";
+            spacestationA.TradeDemand = "Seeds, Medical Supplies, Fuel, Food Rations";
         }
         
 
