@@ -8,6 +8,13 @@ namespace GroupProject
     {
         public static void Main(string[] args)
         {
+
+           
+            
+            
+            Planets();
+            SpaceStation();   
+
             gameTitle();
             startGame();
             endGame();
@@ -20,7 +27,7 @@ namespace GroupProject
         {
             Console.WriteLine("Welcome to SpaceX World");
             Console.WriteLine("Press 'Enter' to Begin");
-            Console.Readline();
+            Console.ReadLine();
             Console.Clear();   
         }
         public static void startGame()
@@ -32,27 +39,23 @@ namespace GroupProject
             Console.WriteLine("Game Over");
             Console.WriteLine("Press 'X' to Exit");
             Console.WriteLine("Press 'X' to Exit or 'Enter' to Begin Another Game");
-            Console.Readline();
+            Console.ReadLine();
             Console.Clear();
         }
         public static void youWin()
         {
             Console.WriteLine("You Won '$$' ");
             Console.WriteLine("Press 'X' to Exit or 'Enter' to Begin Another Game");
-            Console.Readline();
+            Console.ReadLine();
             Console.Clear();
         }
         public static void credits()
         {
             Console.WriteLine("JC");
             Console.WriteLine("Ty");
-            Console.Readline();
+            Console.ReadLine();
             Console.Clear();
-           
-            
-            
-            Planets();
-            SpaceStation();   
+
         }
 
         public static void Planets()
