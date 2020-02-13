@@ -71,7 +71,6 @@ namespace GroupProject
         {
             var planetA = new Planet();
             planetA.Name = "Earth : Trade Station Terra ";
-            planetA.PlanetCoord = "longitude: 179° 56′ 39.4 : latitude: +0° 2′ 46.2";
             planetA.Size = "Diameter 4,196 MILES (6,752 KM)";
             planetA.DistancefromStar = "141,635,350 Miles (227,940,00 KM)";
             planetA.Population = "7.6B Terrains";
@@ -82,7 +81,6 @@ namespace GroupProject
 
             var planetB = new Planet();
             planetB.Name = "Mars : Trade Port Aries";
-            planetB.PlanetCoord = "longitude: 179° 56′ 39.4 : latitude: +0° 2′ 46.2";
             planetB.Size = "Diameter 8,000 MILES (13,000 KM)";
             planetB.DistancefromStar = "141,635,350 Miles (227,940,00 KM)";
             planetB.Population = "120K Colonists";
@@ -93,7 +91,6 @@ namespace GroupProject
 
             var planetC = new Planet();
             planetC.Name = "Moon : Mining Station Arklay";
-            planetB.PlanetCoord = "longitude: 179° 56′ 39.4 : latitude: +0° 2′ 46.2";
             planetB.Size = "Diameter 2900 Miles (4600 kilometres)";
             planetB.DistancefromStar = "150,245,120 Miles (241,796,082 KM)";
             planetB.Population = "10K Colonists";
@@ -107,7 +104,6 @@ namespace GroupProject
         {
             var spacestationA = new SpaceStation();
             spacestationA.StationName = "Trade Station : Hadley's Hope";
-            spacestationA.StationCoord = ;
             spacestationA.Size = "2900 Miles (4600 kilometres)";
             spacestationA.Population = "8,000 Stationers";
             spacestationA.TradeSupply = "Food Rations, Mineral Ore";
