@@ -6,6 +6,9 @@ namespace GroupProject
 {
     class Program
     {
+
+       
+
         public static void Main(string[] args)
         {
 
@@ -107,8 +110,20 @@ namespace GroupProject
             spacestationA.Population = "8,000 Stationers";
             spacestationA.TradeSupply = "Food Rations, Mineral Ore";
             spacestationA.TradeDemand = "Seeds, Medical Supplies, Fuel, Food Rations";
+
+            var spacestationB = new SpaceStation();
+            spacestationB.StationName = "Frontier Station : Ticondaroga";
+            spacestationB.Size = "2900 Miles (4600 kilometres)";
+            spacestationB.Population = "5,000 Stationers";
+            spacestationB.TradeSupply = "Luxury Items, Ship Parts, Fuel";
+            spacestationB.TradeDemand = "Food Rations, Water, Government Cargo, Seeds, Medical Supplies";
         }
         
+        public static void Display()
+        {
+        }
+    }
+
 
 
 
