@@ -134,6 +134,8 @@ namespace GroupProject
             currency.SpaceXBucks = int.Parse(Console.ReadLine());
         }
 
+        
+
 
         public static void Display(string input)
         {
@@ -155,6 +157,7 @@ namespace GroupProject
                     "|                                 |" +
                     "|                          (   )  |" +
                     "|_________________________________|");
+
 
                         break;
                     case "2":
@@ -211,15 +214,46 @@ namespace GroupProject
                     "|                                 |" +
                     "|                                 |" +
                     "|_________________________________|");
+
+                     
                         break;
-
                 }
+                Menubuttons();
 
-            }
+            } while (Age() <= 75);
 
+           
         }
 
+        private static int Age()
+        {
+            if (Age = 75)
+            {
+                Console.ReadLine()
+            }
+          
+        }
 
+        public static void Menubuttons()
+        {
+            Console.WriteLine("\nYou are resting easy at your current port. What would you like to do?");
+            Console.WriteLine("\nType B : Buy");
+            Console.WriteLine("\nType S : Sell");
+            Console.WriteLine("\nType I : Seek information");
+
+            Display();
+        }
+
+        public static void PlanetChoice()
+        {
+            Console.WriteLine($"\nYou are currently at : " ;
+            Console.WriteLine($"\n Type {2} : Moon");
+            Console.WriteLine($"\n Type {3} : Mars");
+            Console.WriteLine($"\n Type {4} : Hadley's Hope");
+            Console.WriteLine($"\n Type {5} : Ticonderoga");
+
+            Display();
+        }
 
 
     }
