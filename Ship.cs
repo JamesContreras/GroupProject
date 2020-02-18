@@ -9,6 +9,14 @@ namespace GroupProject
         public string ShipName;
         public int ShipSpeed;
         public int CargoCap;
-        
+
+
+        public static void SpaceShip()
+        {
+            var spaceship = new Ship();
+            spaceship.ShipName = "Phoenix";
+            spaceship.CargoCap = 1000;
+            spaceship.ShipSpeed = 90;
+        }
     }
 }
