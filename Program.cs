@@ -8,49 +8,40 @@ namespace GroupProject
 {
     class Program
     {
-        
-        
+
+        public static int TaskOrder = 0;
 
         public static void Main(string[] args)
         {
+           
 
-
-            Planet.Map();
-            
-
-
-
-        }
-
-
-
-        public static void MainMenuShow(string input)
-        {
-            switch (input)
-            {
-                case "Enter":
-
-
-                    break;
-
-                case "I":
-
-                    Credits();
-
-                    break;
-
-                default:
-                    break;
-            }
-
+                MainMenu();
+                
 
         }
 
         public static void MainMenu()
         {
-            Console.WriteLine("Press 'Enter' to begin");
-            Console.WriteLine("Type L : to Load last save");
-            Console.WriteLine("Type I : to see credits");
+            
+                Console.WriteLine("WELCOME TO SPACE X UNIVERSE");
+                Console.WriteLine("===========================");
+                Console.WriteLine("Type S : to start || Type C : to see credits");
+                char S = (char)Console.Read();
+                char C = (char)Console.Read();
+                if (Char.IsLetter(S))
+                {
+                    Planet.Map();
+                }
+                else
+                {
+                    Credits();
+                }
+               
+                Console.Clear();
+
+           
+           
+            
         }
 
         public static void Credits()

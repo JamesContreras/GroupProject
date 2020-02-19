@@ -73,17 +73,15 @@ namespace GroupProject
                     }
                 }
 
-
+                Trademenuscreen();
+                Console.Write("==============================");
+                PlanetChoicescreen();
             } while (true);
-        }
-
-        public static void Planetmenu()
-        {
-
+           
         }
 
 
-
+        
         public static void TradeMenu(string input)
         {
             switch (input)
@@ -106,9 +104,6 @@ namespace GroupProject
             switch (input)
             {
                 case "MN":
-
-                    
-
                     break;
                 case "MS":
                     break;
@@ -125,9 +120,8 @@ namespace GroupProject
 
 
             Console.WriteLine("\nYou are resting easy at your current port. What would you like to do?");
-            Console.WriteLine("\nType B : Buy");
-            Console.WriteLine("\nType S : Sell");
-            Console.WriteLine("\nType I : Seek information");
+            Console.WriteLine("\nType B : Buy || Type S : Sell || Type I : Seek Information");
+            
 
 
 
@@ -135,21 +129,13 @@ namespace GroupProject
 
         public static void PlanetChoicescreen()
         {
-            Console.WriteLine($"\nYou are currently at : ");
-            Console.WriteLine($"\n Type MN : To travel to Moon");
-            Console.WriteLine($"\n Type MS : To travel to Mars");
-            Console.WriteLine($"\n Type HH : To travel to Hadley's Hope");
-            Console.WriteLine($"\n Type TA : To travel to Ticonderoga");
+
+            Console.WriteLine($"\n You are currently at Earth");
+            Console.WriteLine($"\n Type MN : To travel to the Moon || Type MS : To travel to Mars || Type HH : To travel to Hadley's Hope || Type TA : To travel to Ticonderoga ");
+           
 
         }
-
-
-
-
-
-
-        public string TradeSupply;
-        public string TradeDemand;
+        
         public int x;
         public int y;
 

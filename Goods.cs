@@ -27,6 +27,7 @@ namespace GroupProject
 
         }
 
+
         public string ProductName;
         public int ProductValue;
         
