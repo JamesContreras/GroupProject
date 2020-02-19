@@ -1,74 +1,164 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Drawing;
 
 namespace GroupProject
 {
+
+
+
     class Planet
     {
-        public string Name;
-        public string PlanetCoord;
-        public string Size;
-        public string SizeMeasure;
-        public string DistancefromStar;
-        public string Population;
-        public string Climate;
-        public string Atmoshphere;
+        public static void Map()
+        {
+            do
+            {
+                List<Planet> planetList = new List<Planet> { };
+
+                Planet earth = new Planet();
+                earth.x = 0;
+                earth.y = 0;
+                planetList.Add(earth);
+
+                Planet moon = new Planet();
+                moon.x = 8;
+                moon.y = 5;
+                planetList.Add(moon);
+
+                Planet mars = new Planet();
+                mars.x = 30;
+                mars.y = 20;
+                planetList.Add(mars);
+
+                Planet HadleyHope = new Planet();
+                HadleyHope.x = 70;
+                HadleyHope.y = 10;
+                planetList.Add(HadleyHope);
+
+                Planet Ticonderoga = new Planet();
+                Ticonderoga.x = 90;
+                Ticonderoga.y = 20;
+                planetList.Add(Ticonderoga);
+
+
+
+                List<(int, int)> XYPair = new List<(int, int)> { };
+
+                foreach (Planet planet in planetList)
+                {
+                    XYPair.Add((planet.x, planet.y));
+                }
+                for (int i = 0; i < 50; i++) //yValue
+                {
+                    for (int a = 0; a < 100; a++) //xValue
+                    {
+
+                        if (XYPair.Contains((a, i)))
+                        {
+                            Console.Write("(   )");
+                        }
+                        else
+                        {
+                            Console.Write(" ");
+                        }
+                       
+                        if (a == 99)
+                        {
+                            Console.Write("\n");
+                        }
+
+
+
+                    }
+                }
+
+
+            } while (true);
+        }
+
+        public static void Planetmenu()
+        {
+
+        }
+
+
+
+        public static void TradeMenu(string input)
+        {
+            switch (input)
+            {
+                case "B":
+                    Console.WriteLine("What are you buying?");
+                    break;
+                case "S":
+                    Console.WriteLine("What are you selling");
+                    break;
+                case "I":
+                    Console.WriteLine("There are no information brokers here today");
+                    break;
+
+            }
+        }
+
+        public static void Planetchoicemenu(string input)
+        {
+            switch (input)
+            {
+                case "MN":
+
+                    
+
+                    break;
+                case "MS":
+                    break;
+                case "HH":
+                    break;
+                case "TA":
+                    break;
+
+            }
+        }
+
+        public static void Trademenuscreen()
+        {
+
+
+            Console.WriteLine("\nYou are resting easy at your current port. What would you like to do?");
+            Console.WriteLine("\nType B : Buy");
+            Console.WriteLine("\nType S : Sell");
+            Console.WriteLine("\nType I : Seek information");
+
+
+
+        }
+
+        public static void PlanetChoicescreen()
+        {
+            Console.WriteLine($"\nYou are currently at : ");
+            Console.WriteLine($"\n Type MN : To travel to Moon");
+            Console.WriteLine($"\n Type MS : To travel to Mars");
+            Console.WriteLine($"\n Type HH : To travel to Hadley's Hope");
+            Console.WriteLine($"\n Type TA : To travel to Ticonderoga");
+
+        }
+
+
+
+
+
+
         public string TradeSupply;
         public string TradeDemand;
+        public int x;
+        public int y;
 
-
-        public static void Planets()
-        {
-            var planetA = new Planet();
-            planetA.Name = "Earth : Trade Station Terra ";
-            planetA.Size = "Diameter 4,196 MILES (6,752 KM)";
-            planetA.DistancefromStar = "141,635,350 Miles (227,940,00 KM)";
-            planetA.Population = "7.6B Terrans";
-            planetA.Climate = "Ranges from extreme cold at the poles to tropical heat at the Equator";
-            planetA.Atmoshphere = "78% Nitrogen,  21% Oxygen, 0.93% Argon, 0.04% Carbon Dioxide";
-            planetA.TradeSupply = "FoodRations, Fuel, Medical Supplies, Mining Equipment, Luxury Items, Water";
-            planetA.TradeDemand = "Mineral Ores, Metals, Energy Batteries";
-
-            var planetB = new Planet();
-            planetB.Name = "Mars : Trade Port Aries";
-            planetB.Size = "Diameter 8,000 MILES (13,000 KM)";
-            planetB.DistancefromStar = "141,635,350 Miles (227,940,00 KM)";
-            planetB.Population = "120K Martians";
-            planetB.Climate = "Average temperature -80F";
-            planetB.Atmoshphere = "95% Carbon Dioxide, 3% Nitrogen, 1.6% Argon";
-            planetB.TradeSupply = "Metals, Mineral Ores, Water, Medical Supplies";
-            planetB.TradeDemand = "Food Rations, Fuel, Equipment Parts";
-
-            var planetC = new Planet();
-            planetC.Name = "Moon : Mining Station Arklay";
-            planetB.Size = "Diameter 2900 Miles (13,000 KM)";
-            planetB.DistancefromStar = "150,245,120 Miles (241,796,082 KM)";
-            planetB.Population = "10K Colonists";
-            planetB.Climate = "Average temperature : -300F";
-            planetB.Atmoshphere = "95% Carbon Dioxide, 3% Nitrogen, 1.6% Argon";
-            planetB.TradeSupply = "Water, Food Rations, Mineral Ore";
-            planetB.TradeDemand = "Seeds, Medical Supplies, Fuel, Food Rations";
-        }
-
-        public static void SpaceStation()
-        {
-            var spacestationA = new SpaceStation();
-            spacestationA.StationName = "Trade Station : Hadley's Hope";
-            spacestationA.Size = "2900 Miles (4600 kilometres)";
-            spacestationA.Population = "8,000 Stationers";
-            spacestationA.TradeSupply = "Food Rations, Mineral Ore";
-            spacestationA.TradeDemand = "Seeds, Medical Supplies, Fuel, Food Rations";
-
-            var spacestationB = new SpaceStation();
-            spacestationB.StationName = "Frontier Station : Ticondaroga";
-            spacestationB.Size = "2900 Miles (4600 kilometres)";
-            spacestationB.Population = "5,000 Stationers";
-            spacestationB.TradeSupply = "Luxury Items, Ship Parts, Fuel";
-            spacestationB.TradeDemand = "Food Rations, Water, Government Cargo, Seeds, Medical Supplies";
-        }
 
     }
 
-
 }
+
+
+            
+
+        
