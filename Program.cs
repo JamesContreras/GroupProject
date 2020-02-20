@@ -114,18 +114,20 @@ namespace GroupProject
 
 
     }
-
-
-
-
+        public static void inclementWeather()
+            {
+        Console.WriteLine("If weather is good, trade and then move to new destination.");
+        Console.WriteLine("If weather is bad, stay put.");
+        
+        string inclementWather;
 
             if (inclementWeather = true)
             {
-            Console.WriteLine("stay put");
+            Console.WriteLine("trade and move to next destination");
             }
             else if (inclementWeather = false)
                 {
-                Console.WriteLine("continue to destinationa");
+                Console.WriteLine("stay put");
                 }
         }
 
@@ -144,25 +146,23 @@ namespace GroupProject
                 {
                 Console.WriteLine("pay taxes on planet");
                 }
-        }        
+        }
         public static void theft()
         {
-            Console.WriteLine("Your vehicle is stolen");
-            Console.WriteLine("Sorry you have been robbed");
+        Console.WriteLine("Your vehicle is stolen");
+        Console.WriteLine("Sorry you have been robbed");
 
-            string partsMalfuction;
+            string theft;
 
-            if (theft = yes)
-            {
-            Console.WriteLine("stay on planet and sell all supplies");
-
-            }
-            else if (theft = no)
-                {
-                Console.WriteLine("continue to next destination");
-            }
-
+             if (theft = yes)
+        {
+                Console.WriteLine("stay on planet and sell all supplies");
 
         }
+             else if (theft = no)
+        {
+                Console.WriteLine("continue to next destination");
+        }
     }
+
 }
