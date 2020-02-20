@@ -31,18 +31,19 @@ namespace GroupProject
                 Console.WriteLine("WELCOME TO SPACE X UNIVERSE");
                 Console.WriteLine("===========================");
                 Console.WriteLine("Type S : to start || Type C : to see credits");
-                char input = char.ToLower(Console.ReadKey().KeyChar);
+                char input = char.ToUpper(Console.ReadKey().KeyChar);
 
-                if (input == 's')
+                if (input == 'S')
                 {
                     Planet.Map();
                     valid = true;
                 }
-                else if (input == 'c')
+                else if (input == 'C')
                 {
                     Credits();
                     valid = true;
                 }
+                
             } while (!valid);
 
 

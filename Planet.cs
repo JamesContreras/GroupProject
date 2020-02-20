@@ -10,6 +10,10 @@ namespace GroupProject
 
     class Planet
     {
+        public int x;
+        public int y;
+        public int userLocation;
+
         public static void Map()
         {
 
@@ -20,7 +24,7 @@ namespace GroupProject
             earth.x = 0;
             earth.y = 0;
             planetList.Add(earth);
-            Console.WriteLine("Earth");
+            
 
             Planet moon = new Planet();
             moon.x = 8;
@@ -87,45 +91,218 @@ namespace GroupProject
                 if (input == 'E')
                 {
                     valid = true;
+                    Console.Clear();
+                    EarthTrademenuscreen();
                 }
+                if (input == 'M')
+                {
+                    valid = true;
+                    Console.Clear();
+                    MoonTrademenuscreen();
+                }
+                if (input == 'R')
+                {
+                    valid = true;
+                    Console.Clear();
+                    MarsTrademenuscreen();
+                }
+                if (input == 'H')
+                {
+                    valid = true;
+                    Console.Clear();
+                    HadleyTrademenuscreen();
+                }
+                if (input == 'T')
+                {
+                    valid = true;
+                    Console.Clear();
+                    TiconderogaTrademenuscreen();
+                }
+                      
                     
 
                 
-            } while (!valid);
+            } while (valid);
         }
 
-        public static void Trademenuscreen()
+        public static void EarthTrademenuscreen()
         {
             bool valid = false;
 
             do
             {
-                Console.Clear();
+                
                 Console.WriteLine("\nWhat would you like to do?");
                 Console.WriteLine("\nType B : Buy || Type S : Sell || Type I : Seek Information");
-                char input = char.ToLower(Console.ReadKey().KeyChar);
+                char input = char.ToUpper(Console.ReadKey().KeyChar);
 
                 if (input == 'B')
-                { 
-                    valid = true;
-                }
-                else if (input == 'S')
                 {
                     valid = true;
+                    Console.Clear();
+                    Goods.EarthGoodList();                               
+                   
                 }
-                else if (input == 'I')
+                if (input == 'S')
+                {
+                    valid = true;
+                    Console.Clear();
+                    Goods.EarthSellList();
+                }
+                if (input == 'I')
                 {
                     Console.WriteLine("There are no information brokers yet");
                     valid = true;
                 }
 
-            } while (!valid);
+            } while (valid);
 
 
         }
 
-        public int x;
-        public int y;
+        public static void MarsTrademenuscreen()
+        {
+            bool valid = false;
+
+            do
+            {
+
+                Console.WriteLine("\nWhat would you like to do?");
+                Console.WriteLine("\nType B : Buy || Type S : Sell || Type I : Seek Information");
+                char input = char.ToUpper(Console.ReadKey().KeyChar);
+
+                if (input == 'B')
+                {
+                    valid = true;
+                    Console.Clear();
+                    Goods.EarthGoodList();
+
+                }
+                if (input == 'S')
+                {
+                    valid = true;
+                    Console.Clear();
+                    Goods.EarthSellList();
+                }
+                if (input == 'I')
+                {
+                    Console.WriteLine("There are no information brokers yet");
+                    valid = true;
+                }
+
+            } while (valid);
+
+
+        }
+
+        public static void MoonTrademenuscreen()
+        {
+            bool valid = false;
+
+            do
+            {
+
+                Console.WriteLine("\nWhat would you like to do?");
+                Console.WriteLine("\nType B : Buy || Type S : Sell || Type I : Seek Information");
+                char input = char.ToUpper(Console.ReadKey().KeyChar);
+
+                if (input == 'B')
+                {
+                    valid = true;
+                    Console.Clear();
+                    Goods.EarthGoodList();
+
+                }
+                if (input == 'S')
+                {
+                    valid = true;
+                    Console.Clear();
+                    Goods.EarthSellList();
+                }
+                if (input == 'I')
+                {
+                    Console.WriteLine("There are no information brokers yet");
+                    valid = true;
+                }
+
+            } while (valid);
+
+
+        }
+
+        public static void HadleyTrademenuscreen()
+        {
+            bool valid = false;
+
+            do
+            {
+
+                Console.WriteLine("\nWhat would you like to do?");
+                Console.WriteLine("\nType B : Buy || Type S : Sell || Type I : Seek Information");
+                char input = char.ToUpper(Console.ReadKey().KeyChar);
+
+                if (input == 'B')
+                {
+                    valid = true;
+                    Console.Clear();
+                    Goods.EarthGoodList();
+
+                }
+                if (input == 'S')
+                {
+                    valid = true;
+                    Console.Clear();
+                    Goods.EarthSellList();
+                }
+                if (input == 'I')
+                {
+                    Console.WriteLine("There are no information brokers yet");
+                    valid = true;
+                }
+
+            } while (valid);
+
+
+        }
+
+        public static void TiconderogaTrademenuscreen()
+        {
+            bool valid = false;
+
+            do
+            {
+
+                Console.WriteLine("\nWhat would you like to do?");
+                Console.WriteLine("\nType B : Buy || Type S : Sell || Type I : Seek Information");
+                char input = char.ToUpper(Console.ReadKey().KeyChar);
+
+                if (input == 'B')
+                {
+                    valid = true;
+                    Console.Clear();
+                    Goods.EarthGoodList();
+
+                }
+                if (input == 'S')
+                {
+                    valid = true;
+                    Console.Clear();
+                    Goods.EarthSellList();
+                }
+                if (input == 'I')
+                {
+                    Console.WriteLine("There are no information brokers yet");
+                    valid = true;
+                }
+
+            } while (valid);
+
+
+        }
+
+       
+
+
 
 
     }
