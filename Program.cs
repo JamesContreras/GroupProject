@@ -9,8 +9,6 @@ namespace GroupProject
         public static void Main(string[] args)
         {
 
-            
-            
             Planets();
             SpaceStation();   
 =========
@@ -108,16 +106,56 @@ namespace GroupProject
             spacestationA.TradeSupply = "Food Rations, Mineral Ore";
             spacestationA.TradeDemand = "Seeds, Medical Supplies, Fuel, Food Rations";
         }
-        
+        ///Strory Line
+        public static void inclementWeather()
+        {
+            Console.WriteLine("If there is inclement Weather? What will you do?");
+            Console.WriteLine("If bad weather, stay put; if good continue to next destination");
 
+            string Weather;
 
+            if (inclementWeather = true)
+            {
+            Console.WriteLine("stay put");
+            }
+            else if (inclementWeather = false)
+                {
+                Console.WriteLine("continue to destinationa");
+                }
+        }
 
+        public static void partsMalfuction()
+        {
+            Console.WriteLine("If repaired, earn $$$ and move to next destination");
+            Console.WriteLine("If not repaired, stay put and pay taxes");
 
+            string partsMalfuction;
+
+            if (partsMalfuction = yes)
+            {
+            Console.WriteLine("Earned $$$");
+            }
+            else if (partsMalfontuntion = no)
+                {
+                Console.WriteLine("pay taxes on planet");
+                }
+        }        
+        public static void theft()
+        {
+            Console.WriteLine("Your vehicle is stolen");
+            Console.WriteLine("Sorry you have been robbed");
+
+            string partsMalfuction;
+
+            if (theft = yes)
+            {
+            Console.WriteLine("stay on planet and sell all supplies");
+
+            }
+            else if (theft = no)
+                {
+                Console.WriteLine("continue to next destination");
+            }
+        }
     }
-
-   
-    
-
-
 }
-    
