@@ -13,10 +13,10 @@ namespace GroupProject
 
         public static void SpaceShip()
         {
-            var spaceship = new Ship();
-            spaceship.ShipName = "Phoenix";
-            spaceship.CargoCap = 1000;
-            spaceship.ShipSpeed = 90;
+            Console.WriteLine($"Current Cargo Capacity is {1000}");
+            Console.WriteLine($"Your ship location is :");
+
+
         }
     }
 }
