@@ -12,130 +12,118 @@ namespace GroupProject
     {
         public static void Map()
         {
+
+
+            List<Planet> planetList = new List<Planet> { };
+
+            Planet earth = new Planet();
+            earth.x = 0;
+            earth.y = 0;
+            planetList.Add(earth);
+            Console.WriteLine("Earth");
+
+            Planet moon = new Planet();
+            moon.x = 8;
+            moon.y = 5;
+            planetList.Add(moon);
+
+            Planet mars = new Planet();
+            mars.x = 30;
+            mars.y = 20;
+            planetList.Add(mars);
+
+            Planet HadleyHope = new Planet();
+            HadleyHope.x = 70;
+            HadleyHope.y = 10;
+            planetList.Add(HadleyHope);
+
+            Planet Ticonderoga = new Planet();
+            Ticonderoga.x = 90;
+            Ticonderoga.y = 20;
+            planetList.Add(Ticonderoga);
+
+
+
+            List<(int, int)> XYPair = new List<(int, int)> { };
+
+            foreach (Planet planet in planetList)
+            {
+                XYPair.Add((planet.x, planet.y));
+            }
+
             do
             {
-                List<Planet> planetList = new List<Planet> { };
 
-                Planet earth = new Planet();
-                earth.x = 0;
-                earth.y = 0;
-                planetList.Add(earth);
+                Console.Clear();
 
-                Planet moon = new Planet();
-                moon.x = 8;
-                moon.y = 5;
-                planetList.Add(moon);
-
-                Planet mars = new Planet();
-                mars.x = 30;
-                mars.y = 20;
-                planetList.Add(mars);
-
-                Planet HadleyHope = new Planet();
-                HadleyHope.x = 70;
-                HadleyHope.y = 10;
-                planetList.Add(HadleyHope);
-
-                Planet Ticonderoga = new Planet();
-                Ticonderoga.x = 90;
-                Ticonderoga.y = 20;
-                planetList.Add(Ticonderoga);
-
-
-
-                List<(int, int)> XYPair = new List<(int, int)> { };
-
-                foreach (Planet planet in planetList)
+                foreach (var xy in XYPair)
                 {
-                    XYPair.Add((planet.x, planet.y));
-                }
-                for (int i = 0; i < 50; i++) //yValue
-                {
-                    for (int a = 0; a < 100; a++) //xValue
-                    {
-
-                        if (XYPair.Contains((a, i)))
-                        {
-                            Console.Write("(   )");
-                        }
-                        else
-                        {
-                            Console.Write(" ");
-                        }
-                       
-                        if (a == 99)
-                        {
-                            Console.Write("\n");
-                        }
-
-
-
-                    }
+                    Console.SetCursorPosition(xy.Item1, xy.Item2);
+                    Console.Write("(   )");
                 }
 
-                Trademenuscreen();
-                Console.Write("==============================");
+                Console.WriteLine("\n");
                 PlanetChoicescreen();
+                
+                
+                
             } while (true);
-           
+
         }
 
 
-        
-        public static void TradeMenu(string input)
+       
+
+        public static void PlanetChoicescreen()
         {
-            switch (input)
+            bool valid = false;
+            
+            do
             {
-                case "B":
-                    Console.WriteLine("What are you buying?");
-                    break;
-                case "S":
-                    Console.WriteLine("What are you selling");
-                    break;
-                case "I":
-                    Console.WriteLine("There are no information brokers here today");
-                    break;
+                Console.WriteLine($"\n Type E : To travel to the Earth || Type M : To travel to the Moon || Type R : To travel to Mars || Type H : To travel to Hadley's Hope || Type T : To travel to Ticonderoga ");
 
-            }
-        }
+                char input = char.ToUpper(Console.ReadKey().KeyChar);
 
-        public static void Planetchoicemenu(string input)
-        {
-            switch (input)
-            {
-                case "MN":
-                    break;
-                case "MS":
-                    break;
-                case "HH":
-                    break;
-                case "TA":
-                    break;
+                if (input == 'E')
+                {
+                    valid = true;
+                }
+                    
 
-            }
+                
+            } while (!valid);
         }
 
         public static void Trademenuscreen()
         {
+            bool valid = false;
 
+            do
+            {
+                Console.Clear();
+                Console.WriteLine("\nWhat would you like to do?");
+                Console.WriteLine("\nType B : Buy || Type S : Sell || Type I : Seek Information");
+                char input = char.ToLower(Console.ReadKey().KeyChar);
 
-            Console.WriteLine("\nYou are resting easy at your current port. What would you like to do?");
-            Console.WriteLine("\nType B : Buy || Type S : Sell || Type I : Seek Information");
-            
+                if (input == 'B')
+                { 
+                    valid = true;
+                }
+                else if (input == 'S')
+                {
+                    valid = true;
+                }
+                else if (input == 'I')
+                {
+                    Console.WriteLine("There are no information brokers yet");
+                    valid = true;
+                }
 
+            } while (!valid);
 
 
         }
 
-        public static void PlanetChoicescreen()
-        {
-
-            Console.WriteLine($"\n You are currently at Earth");
-            Console.WriteLine($"\n Type MN : To travel to the Moon || Type MS : To travel to Mars || Type HH : To travel to Hadley's Hope || Type TA : To travel to Ticonderoga ");
-           
-
-        }
-        
         public int x;
         public int y;
 
@@ -145,6 +133,5 @@ namespace GroupProject
 }
 
 
-            
 
-        
+

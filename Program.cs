@@ -13,35 +13,40 @@ namespace GroupProject
 
         public static void Main(string[] args)
         {
-           
 
-                MainMenu();
-                
+
+            MainMenu();
+
 
         }
 
         public static void MainMenu()
         {
-            
+            bool valid = false;
+
+            do
+            {
+                Console.Clear();
+
                 Console.WriteLine("WELCOME TO SPACE X UNIVERSE");
                 Console.WriteLine("===========================");
                 Console.WriteLine("Type S : to start || Type C : to see credits");
-                char S = (char)Console.Read();
-                char C = (char)Console.Read();
-                if (Char.IsLetter(S))
+                char input = char.ToLower(Console.ReadKey().KeyChar);
+
+                if (input == 's')
                 {
                     Planet.Map();
+                    valid = true;
                 }
-                else
+                else if (input == 'c')
                 {
                     Credits();
+                    valid = true;
                 }
-               
-                Console.Clear();
+            } while (!valid);
 
-           
-           
-            
+
+
         }
 
         public static void Credits()
@@ -57,7 +62,7 @@ namespace GroupProject
 
 
 
-        
+
 
 
 
@@ -93,11 +98,11 @@ namespace GroupProject
         //}
 
 
-        
 
 
 
-        
+
+
 
 
 
@@ -124,4 +129,3 @@ namespace GroupProject
 
 
 }
-    
