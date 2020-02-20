@@ -10,13 +10,19 @@ namespace GroupProject
 
         public static void EarthGoodList()
         {
-           
-            int[] sellprice = new int[6] { 23, 100, 10, 15, 40, 32 };
-            string[] sellgood = new string[6] { "Mining Equipment", "Water", "Food Supples", "Fuel", "LuxuryItems", "Medical Supplies" };
+                       
             int[] buyprice = new int[3] { 150, 200, 400};
             string[] buygood = new string[3] { "Mineral ores", "Metals", "Energy Batteries"};
+            Console.WriteLine("Welcome to the best trade port in the Sol System.  What can I get you?");
+            Console.WriteLine(new string[3]);
 
 
+        }
+
+        public static void EarthSellList()
+        {
+            int[] sellprice = new int[6] { 23, 100, 10, 15, 40, 32 };
+            string[] sellgood = new string[6] { "Mining Equipment", "Water", "Food Supples", "Fuel", "LuxuryItems", "Medical Supplies" };
         }
         public static void MarsGoodList()
         {
