@@ -11,7 +11,6 @@ namespace GroupProject
 
             Planets();
             SpaceStation();   
-=========
             gameTitle();
             startGame();
             endGame();
@@ -61,7 +60,6 @@ namespace GroupProject
             Console.WriteLine("Ty");
             Console.ReadLine();
             Console.Clear();
->>>>>>>>> Temporary merge branch 2
         }
 
         public static void Planets()
@@ -156,6 +154,8 @@ namespace GroupProject
                 {
                 Console.WriteLine("continue to next destination");
             }
+
+
         }
     }
 }
