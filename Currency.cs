@@ -6,6 +6,23 @@ namespace GroupProject
 {
     class Currency
     {
-        public int SpaceXBucks;
+
+
+
+        public decimal bucksinaccount = 500;
+        public decimal bucks = 0;
+
+        public void Acquire(decimal bucks)
+        {
+            bucksinaccount += bucks;
+
+        }
+
+        public void Spend(decimal amount)
+        {
+            bucksinaccount -= amount;
+        }
+
+
     }
 }

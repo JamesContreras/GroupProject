@@ -23,6 +23,7 @@ namespace GroupProject
         public static void MainMenu()
         {
             bool valid = false;
+            var currency = new Currency();
 
             do
             {
@@ -35,7 +36,7 @@ namespace GroupProject
 
                 if (input == 'S')
                 {
-                    Planet.Map();
+                    Planet.Map(currency);
                     valid = true;
                 }
                 else if (input == 'C')
@@ -52,8 +53,8 @@ namespace GroupProject
 
         public static void Credits()
         {
-            Console.WriteLine("JC");
-            Console.WriteLine("Ty");
+            Console.WriteLine("James Contreras and Ty Meeks");
+            Console.WriteLine("Credit Johnny Rico to Starship Troopers by");
             Console.ReadLine();
             Console.Clear();
 
@@ -72,13 +73,6 @@ namespace GroupProject
 
 
 
-        //public static void GameTitle()
-        //{
-        //    Console.WriteLine("WELCOME TO SPACE X UNIVERSE");
-
-        //    MainMenu();
-        //    Console.Clear();
-        //}
 
         //public static void EndGame()
         //{
@@ -106,12 +100,6 @@ namespace GroupProject
 
 
 
-
-        //public static void Currency()
-        //{
-        //    var currency = new Currency();
-        //    currency.SpaceXBucks = int.Parse(Console.ReadLine());
-        //}
 
 
 
