@@ -14,7 +14,9 @@ namespace GroupProject
         public int y;
         public int userLocation;
 
-        public static void Map()
+        
+
+        public static void Map(Currency currency)
         {
 
 
@@ -24,7 +26,6 @@ namespace GroupProject
             earth.x = 0;
             earth.y = 0;
             planetList.Add(earth);
-            
 
             Planet moon = new Planet();
             moon.x = 8;
@@ -53,6 +54,7 @@ namespace GroupProject
             foreach (Planet planet in planetList)
             {
                 XYPair.Add((planet.x, planet.y));
+                
             }
 
             do
@@ -67,7 +69,7 @@ namespace GroupProject
                 }
 
                 Console.WriteLine("\n");
-                PlanetChoicescreen();
+                PlanetChoicescreen(currency);
                 
                 
                 
@@ -78,12 +80,13 @@ namespace GroupProject
 
        
 
-        public static void PlanetChoicescreen()
+        public static void PlanetChoicescreen(Currency currency)
         {
             bool valid = false;
             
             do
             {
+
                 Console.WriteLine($"\n Type E : To travel to the Earth || Type M : To travel to the Moon || Type R : To travel to Mars || Type H : To travel to Hadley's Hope || Type T : To travel to Ticonderoga ");
 
                 char input = char.ToUpper(Console.ReadKey().KeyChar);
@@ -92,7 +95,7 @@ namespace GroupProject
                 {
                     valid = true;
                     Console.Clear();
-                    EarthTrademenuscreen();
+                    EarthTrademenuscreen(currency);
                 }
                 if (input == 'M')
                 {
@@ -122,10 +125,10 @@ namespace GroupProject
                     
 
                 
-            } while (valid);
+            } while (!valid);
         }
 
-        public static void EarthTrademenuscreen()
+        public static void EarthTrademenuscreen(Currency currency)
         {
             bool valid = false;
 
@@ -133,29 +136,38 @@ namespace GroupProject
             {
                 
                 Console.WriteLine("\nWhat would you like to do?");
-                Console.WriteLine("\nType B : Buy || Type S : Sell || Type I : Seek Information");
+                Console.WriteLine("\nType B : Buy || Type S : Sell || Type I : Seek Information || Type G : Return to planet menu");
                 char input = char.ToUpper(Console.ReadKey().KeyChar);
 
                 if (input == 'B')
                 {
                     valid = true;
                     Console.Clear();
-                    Goods.EarthGoodList();                               
+                    Goods.EarthSellList(currency);                               
                    
                 }
-                if (input == 'S')
+                else if (input == 'S')
                 {
                     valid = true;
                     Console.Clear();
-                    Goods.EarthSellList();
+                    Goods.EarthBuyList();
                 }
-                if (input == 'I')
+                else if (input == 'I')
                 {
+                    Console.Clear();
                     Console.WriteLine("There are no information brokers yet");
                     valid = true;
                 }
+                else if (input == 'G')
+                {
+                    valid = true;
+                    Console.Clear();
+                    Map(currency);
+                    PlanetChoicescreen(currency);
+                }
 
-            } while (valid);
+
+            } while (!valid);
 
 
         }
@@ -175,14 +187,13 @@ namespace GroupProject
                 {
                     valid = true;
                     Console.Clear();
-                    Goods.EarthGoodList();
 
                 }
                 if (input == 'S')
                 {
                     valid = true;
                     Console.Clear();
-                    Goods.EarthSellList();
+                    
                 }
                 if (input == 'I')
                 {
@@ -210,14 +221,14 @@ namespace GroupProject
                 {
                     valid = true;
                     Console.Clear();
-                    Goods.EarthGoodList();
+                   
 
                 }
                 if (input == 'S')
                 {
                     valid = true;
                     Console.Clear();
-                    Goods.EarthSellList();
+                    
                 }
                 if (input == 'I')
                 {
@@ -245,14 +256,14 @@ namespace GroupProject
                 {
                     valid = true;
                     Console.Clear();
-                    Goods.EarthGoodList();
+                    
 
                 }
                 if (input == 'S')
                 {
                     valid = true;
                     Console.Clear();
-                    Goods.EarthSellList();
+                  
                 }
                 if (input == 'I')
                 {
@@ -280,14 +291,14 @@ namespace GroupProject
                 {
                     valid = true;
                     Console.Clear();
-                    Goods.EarthGoodList();
+                  
 
                 }
                 if (input == 'S')
                 {
                     valid = true;
                     Console.Clear();
-                    Goods.EarthSellList();
+                   
                 }
                 if (input == 'I')
                 {

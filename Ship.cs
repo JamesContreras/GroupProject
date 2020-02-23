@@ -13,8 +13,7 @@ namespace GroupProject
 
         public static void SpaceShip()
         {
-            Console.WriteLine($"Current Cargo Capacity is {1000}");
-            Console.WriteLine($"Your ship location is :");
+            
 
 
         }
