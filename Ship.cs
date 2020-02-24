@@ -36,7 +36,7 @@ namespace GroupProject
             foreach (string value in cargos)
             {
                 
-                Console.WriteLine("Item : {0} ", value);
+                Console.WriteLine(value);
             }
 
             Console.WriteLine("\nPress 'Enter' to return to the travel screen");
