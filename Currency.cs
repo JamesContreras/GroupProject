@@ -9,7 +9,7 @@ namespace GroupProject
 
 
 
-        public decimal bucksinaccount = 500;
+        public decimal bucksinaccount = 1000;
         public decimal bucks = 0;
 
         public void Acquire(decimal bucks)
@@ -18,7 +18,7 @@ namespace GroupProject
 
         }
 
-        public void Spend(decimal amount)
+        public void Spend(decimal amount, Currency currency)
         {
             bucksinaccount -= amount;
         }

@@ -6,6 +6,7 @@ namespace GroupProject
 {
     class Goods
     {
+        
         //Creates goods for planet tradesystem
 
         
@@ -15,23 +16,14 @@ namespace GroupProject
             
             do
             {
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("What would you like to Sell Terran?");
                 Console.WriteLine("=================================================================");
                 Console.WriteLine($"\n Currently in high demand | Mineral Ores : {150} Bucks || Metals : {200} Bucks || Energy Batteries : {400} Bucks");
                 string input = Console.ReadLine();
 
-                if (input == "MO")
-                {
-                    valid = true;                  
-                }
-                if (input == "MS")
-                {
-                    valid = true;
-                }
-                if (input == "EN")
-                {
-                    valid = true;
-                }
+              
             } while (!valid);
 
             
@@ -42,58 +34,74 @@ namespace GroupProject
             bool valid = false;
             do
             {
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("What would you like to Buy Terran?");
                 Console.WriteLine("=================================================================");
-                Console.WriteLine($"\nMining Equipment : {23} Bucks || Water : {100} Bucks || Food Supplies : {10} Bucks || Fuel : {15} Bucks || LuxueryItems : {40} Bucks || Medical Supplies : {32} || Return to Menu");
+                Console.WriteLine($"\n Type ME : Mining Equipment : {23} Bucks || Type W : Water : {100} Bucks || Type FS : Food Supplies : {10} Bucks || Type F : Fuel : {15} Bucks || Type LI : LuxueryItems : {40} Bucks || Type MS : Medical Supplies : {32} || Type G : Return to Menu");
                 string input = Console.ReadLine();
-                do
-                {
+
+
+                 if (input == "ME")
+                 {
+                    char charYesOrNo;
+
+                   
+                   
+                    valid = true;
+                    Console.WriteLine("\nQuantity?");
                     
+                    // Get input from user
+                    // Int.parse()
+                    var amount = int.Parse(Console.ReadLine());
 
-                    if (input == "Mining Equipment")
+                    if (amount > 10)
                     {
-                        valid = true;
-                        Console.WriteLine("\nQuantity?");
-
-                        // Get input from user
-                        // Int.parse()
-                        var amount = int.Parse(Console.ReadLine());
-
-                        if (amount >= 10)
-                        {
-                            Console.WriteLine("You can't buy that much, try again");
-                            Console.ReadLine();
-                        }
-
-
-                        // Multiply quantity by price of item
-                        var totalPrice = amount * 23;
-
-                        // Decrement currency amount
-                        currency.Spend(totalPrice);
-
-                        Console.WriteLine($"\nYou bought {amount} Mining Equipment pieces for {totalPrice}");
-
-                        Console.WriteLine("\nWould you like to make another purchase: Yes or No?");
-
-                        char charYesOrNo;
-
-                        do
-                        {
-                            charYesOrNo = Console.ReadKey().KeyChar;
-
-                        } while (char.ToUpper(charYesOrNo) != 'N');
-                        
-
+                        Console.Clear();                   
+                        Console.WriteLine("You can't buy that much, press Enter to return to primary screen");
                         Console.ReadLine();
-
-
-
+                        EarthSellList(currency);
                     }
 
-                } while (!valid);
+                     
+                   
+                   
+                    // Multiply quantity by price of item
+                    var totalPrice = amount * 23;
 
-                if (input == "Water")
+                    // Decrement currency amount
+                    currency.Spend(totalPrice, currency);
+
+                    Console.WriteLine($"\nYou bought {amount} Mining Equipment pieces for {totalPrice} Bucks");
+
+
+
+                    Console.WriteLine("\nWould you like to make another purchase: Type Yes or No?");
+
+                   
+                     
+                    charYesOrNo = Console.ReadKey().KeyChar;
+
+                    if (char.ToUpper(charYesOrNo) == 'Y')
+                    {
+                        Console.Clear();
+                        EarthSellList(currency);
+                    }
+
+                    else if(char.ToUpper(charYesOrNo) == 'N')
+                    {
+                        Console.WriteLine("Press 'Enter' to return to the travel screen");
+                        Console.ReadLine();
+                        Console.Clear();
+                        Planet.Map(currency);
+                        Planet.PlanetChoicescreen(currency);
+                    }
+
+                 }
+
+               
+
+                if (input == "W")
                 {
                     valid = true;
                     Console.WriteLine("\nQuantity?");
@@ -110,9 +118,11 @@ namespace GroupProject
                     {
                         var totalPrice = amount * 100;
 
-                        currency.Spend(totalPrice);
+                        currency.Spend(totalPrice, currency);
 
-                        Console.WriteLine($"You bought {amount} for {totalPrice}");
+                        Console.WriteLine($"You bought {amount} for {totalPrice} Bucks");
+
+                       
 
                         Console.WriteLine("Do you want to make another purchase : Y or N?");
 
@@ -124,14 +134,14 @@ namespace GroupProject
                 }   
 
 
-                if (input == "Food Supplies")
+                if (input == "FS")
                 {
                     valid = true;
                     Console.WriteLine("\nQuantity?");
 
                     var amount = int.Parse(Console.ReadLine());
                    
-                    if (amount >= 10)
+                    if (amount > 10)
                     {
                         Console.WriteLine("Not enough supplies");
                     }
@@ -139,15 +149,15 @@ namespace GroupProject
                     {
                         var totalPrice = amount * 10;
 
-                        currency.Spend(totalPrice);
+                        currency.Spend(totalPrice, currency);
 
-                        Console.WriteLine($"You bought {amount} for {totalPrice}");
+                        Console.WriteLine($"You bought {amount} for {totalPrice} Bucks");
                     }
                   
 
                 }
 
-                if (input == "Fuel")
+                if (input == "F")
                 {
                     valid = true;
                     Console.WriteLine("\nQuantity?");
@@ -160,13 +170,13 @@ namespace GroupProject
 
                         var totalPrice = amount * 15;
 
-                        currency.Spend(totalPrice);
+                        currency.Spend(totalPrice, currency);
 
-                        Console.WriteLine($"You bought {amount} for {totalPrice}");
+                        Console.WriteLine($"You bought {amount} for {totalPrice} Bucks");
                     
                 }
 
-                if (input == "LuxuryItems")
+                if (input == "LI")
                 {
                     valid = true;
                     Console.WriteLine("\nQuantity?");
@@ -179,13 +189,13 @@ namespace GroupProject
 
                         var totalPrice = amount * 40;
 
-                        currency.Spend(totalPrice);
+                        currency.Spend(totalPrice, currency);
 
-                        Console.WriteLine($"You bought {amount} for {totalPrice}");
+                        Console.WriteLine($"You bought {amount} for {totalPrice} Bucks");
                     
                 }
 
-                if (input == "Medical Supplies")
+                if (input == "MS")
                 {
                     valid = true;
                     Console.WriteLine("\nQuantity?");
@@ -198,16 +208,18 @@ namespace GroupProject
 
                         var totalPrice = amount * 40;
 
-                        currency.Spend(totalPrice);
+                        currency.Spend(totalPrice, currency);
 
-                        Console.WriteLine($"You bought {amount} for {totalPrice}");
+                        Console.WriteLine($"You bought {amount} for {totalPrice} Bucks");
                     
                 }
 
-                if (input == "Return to Menu")
+                if (input == "G")
                 {
                     valid = true;
                     Console.Clear();
+                    Planet.Map(currency);
+                    Planet.PlanetChoicescreen(currency);
                 }
 
                

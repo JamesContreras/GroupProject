@@ -29,9 +29,17 @@ namespace GroupProject
             {
                 Console.Clear();
 
-                Console.WriteLine("WELCOME TO SPACE X UNIVERSE");
-                Console.WriteLine("===========================");
-                Console.WriteLine("Type S : to start || Type C : to see credits");
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.Green;
+                string s = "\nWELCOME TO SPACE X UNIVERSE";
+                string a = "\n===========================";
+                string b = "\nType S : to start || Type C : to see credits";
+                Console.SetCursorPosition((Console.WindowWidth - s.Length) / 10, Console.CursorTop);
+                Console.SetCursorPosition((Console.WindowWidth - a.Length) / 8, Console.CursorTop);
+                Console.SetCursorPosition((Console.WindowWidth - b.Length) / 7, Console.CursorTop);
+                Console.WriteLine(s);
+                Console.WriteLine(a);
+                Console.WriteLine(b);                     
                 char input = char.ToUpper(Console.ReadKey().KeyChar);
 
                 if (input == 'S')
@@ -54,9 +62,10 @@ namespace GroupProject
         public static void Credits()
         {
             Console.WriteLine("James Contreras and Ty Meeks");
-            Console.WriteLine("Credit Johnny Rico to Starship Troopers by");
+            
             Console.ReadLine();
             Console.Clear();
+            MainMenu();
 
         }
 

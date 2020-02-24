@@ -61,14 +61,21 @@ namespace GroupProject
             {
 
                 Console.Clear();
-
+                Console.BackgroundColor = ConsoleColor.Cyan;
+                Console.ForegroundColor = ConsoleColor.Green;
                 foreach (var xy in XYPair)
                 {
                     Console.SetCursorPosition(xy.Item1, xy.Item2);
-                    Console.Write("(   )");
+                    
+                    Console.Write("    ");
                 }
 
                 Console.WriteLine("\n");
+                Console.WriteLine("\n");
+                Console.WriteLine("\n");
+                Console.WriteLine("\n");
+
+                Ship.Starship();
                 PlanetChoicescreen(currency);
                 
                 
@@ -86,8 +93,12 @@ namespace GroupProject
             
             do
             {
-
-                Console.WriteLine($"\n Type E : To travel to the Earth || Type M : To travel to the Moon || Type R : To travel to Mars || Type H : To travel to Hadley's Hope || Type T : To travel to Ticonderoga ");
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("\n");
+                Console.WriteLine("\n**********************************");
+                Console.WriteLine("\nWhere would you like to go?");
+                Console.WriteLine($"\nType E : To travel to the Earth || Type M : To travel to the Moon || Type R : To travel to Mars || Type H : To travel to Hadley's Hope || Type T : To travel to Ticonderoga || Type C : to check Cargo ");
 
                 char input = char.ToUpper(Console.ReadKey().KeyChar);
 
@@ -107,7 +118,7 @@ namespace GroupProject
                 {
                     valid = true;
                     Console.Clear();
-                    MarsTrademenuscreen();
+                    MarsTrademenuscreen(currency);
                 }
                 if (input == 'H')
                 {
@@ -121,8 +132,17 @@ namespace GroupProject
                     Console.Clear();
                     TiconderogaTrademenuscreen();
                 }
-                      
-                    
+                if (input == 'C')
+                {
+                    valid = true;
+                    Console.Clear();
+                    Ship.StarshipCargo(currency);
+                }
+
+                Console.WriteLine("\n");
+                Console.WriteLine("\n*****************************");
+                Ship.Starship();
+                
 
                 
             } while (!valid);
@@ -134,7 +154,8 @@ namespace GroupProject
 
             do
             {
-                
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("\nWhat would you like to do?");
                 Console.WriteLine("\nType B : Buy || Type S : Sell || Type I : Seek Information || Type G : Return to planet menu");
                 char input = char.ToUpper(Console.ReadKey().KeyChar);
@@ -143,8 +164,7 @@ namespace GroupProject
                 {
                     valid = true;
                     Console.Clear();
-                    Goods.EarthSellList(currency);                               
-                   
+                    Goods.EarthSellList(currency);                                  
                 }
                 else if (input == 'S')
                 {
@@ -154,8 +174,12 @@ namespace GroupProject
                 }
                 else if (input == 'I')
                 {
-                    Console.Clear();
+                    
                     Console.WriteLine("There are no information brokers yet");
+                    Console.WriteLine("Press 'Enter' to return to the option screen");
+                    Console.ReadLine();
+                    Console.Clear();
+                    EarthTrademenuscreen(currency);
                     valid = true;
                 }
                 else if (input == 'G')
@@ -172,7 +196,7 @@ namespace GroupProject
 
         }
 
-        public static void MarsTrademenuscreen()
+        public static void MarsTrademenuscreen(Currency currency)
         {
             bool valid = false;
 
@@ -180,13 +204,14 @@ namespace GroupProject
             {
 
                 Console.WriteLine("\nWhat would you like to do?");
-                Console.WriteLine("\nType B : Buy || Type S : Sell || Type I : Seek Information");
+                Console.WriteLine("\nType B : Buy || Type S : Sell || Type I : Seek Information || Type G : Return to Menu");
                 char input = char.ToUpper(Console.ReadKey().KeyChar);
 
                 if (input == 'B')
                 {
                     valid = true;
                     Console.Clear();
+                    
 
                 }
                 if (input == 'S')
@@ -199,6 +224,11 @@ namespace GroupProject
                 {
                     Console.WriteLine("There are no information brokers yet");
                     valid = true;
+                }
+                if (input == 'G')
+                {
+                    valid = true;
+                    PlanetChoicescreen(currency);
                 }
 
             } while (valid);
