@@ -12,7 +12,7 @@ namespace GroupProject
     {
         public int x;
         public int y;
-        public int userLocation;
+       
 
         
 
@@ -62,12 +62,13 @@ namespace GroupProject
 
                 Console.Clear();
                 Console.BackgroundColor = ConsoleColor.Cyan;
-                Console.ForegroundColor = ConsoleColor.Green;
+                Console.ForegroundColor = ConsoleColor.Black;
                 foreach (var xy in XYPair)
                 {
                     Console.SetCursorPosition(xy.Item1, xy.Item2);
+
+                    Console.Write($"{xy}");
                     
-                    Console.Write("    ");
                 }
 
                 Console.WriteLine("\n");
