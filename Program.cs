@@ -31,13 +31,35 @@ namespace GroupProject
 
                 Console.BackgroundColor = ConsoleColor.Black;
                 Console.ForegroundColor = ConsoleColor.Green;
-                string s = "\nWELCOME TO SPACE X UNIVERSE";
+                string s = @"
+
+
+
+
+
+
+					==========  ==========
+					=        =  =        =
+					==       =  =       ==
+					   \    \    /    /
+					    \    \  /    /  
+					     \    \/    / 
+				              \        /
+					       \      /
+					       /      \
+					      /   /\   \
+					     /   /  \   \
+					    /	/    \   \	
+					   /   /      \   \
+					==      =    =      ==
+					=       =    =       =
+					=========    =========";
+                string c = "\n WELCOME TO SPACE X UNIVERSE";                   
                 string a = "\n===========================";
                 string b = "\nType S : to start || Type C : to see credits";
-                Console.SetCursorPosition((Console.WindowWidth - s.Length) / 10, Console.CursorTop);
-                Console.SetCursorPosition((Console.WindowWidth - a.Length) / 8, Console.CursorTop);
-                Console.SetCursorPosition((Console.WindowWidth - b.Length) / 7, Console.CursorTop);
+                
                 Console.WriteLine(s);
+                Console.WriteLine(c);
                 Console.WriteLine(a);
                 Console.WriteLine(b);                     
                 char input = char.ToUpper(Console.ReadKey().KeyChar);

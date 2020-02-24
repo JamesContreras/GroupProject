@@ -17,7 +17,7 @@ namespace GroupProject
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("\nShipName :");
             Console.WriteLine(Ship.Name);
-            Console.WriteLine("\nCurrent Cargo :");
+            Console.WriteLine("\nCurrent Cargo Size :");
             Console.WriteLine(Ship.CargoCap);
             Console.WriteLine($"\nCurrent Bucks :");
             Console.WriteLine(Ship.BucksInAccount);
